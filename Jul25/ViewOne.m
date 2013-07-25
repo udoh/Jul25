@@ -61,6 +61,8 @@
 		self.myTextField.keyboardType = UIKeyboardTypeDefault;
 		self.myTextField.returnKeyType = UIReturnKeyDone;
         
+        self.myTextField.delegate = self;
+        
         [self addSubview: self.myTextField];
         
     }
@@ -91,6 +93,12 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.myTextField resignFirstResponder];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

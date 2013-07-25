@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ViewOne : UIView
+@interface ViewOne : UIView <UITextFieldDelegate>
 
 @property (strong, nonatomic) UITextField *myTextField;
 @property (strong, nonatomic) UIButton *myButton;

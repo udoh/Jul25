@@ -27,8 +27,6 @@
     
     // add target-action to button
     [((ViewOne *)self.view).myButton addTarget:self.view action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    
-    ((ViewOne *)self.view).myTextField.delegate = self;
 }
 
 - (void)viewWillLayoutSubviews
@@ -51,12 +49,6 @@
     
     NSArray *deviceOrientations = @[@"Unknown", @"Portrait", @"PortraitUpsideDown", @"LandscapeRight", @"LandscapeLeft"];
     ((ViewOne *)self.view).orientationLabel.text = deviceOrientations[self.interfaceOrientation];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end
